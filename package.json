@@ -4,7 +4,7 @@
   "description": "issue/bug tracker",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon index.js -e ejs,js,css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "rahul",
