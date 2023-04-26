@@ -1,8 +1,11 @@
+const dotenv = require('dotenv').config();
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 8000;
 const db = require('./config/mongoose');
 const expressLayout = require('express-ejs-layouts');
+
+app.use(express.urlencoded());
 
 // ejs engine
 app.set('view engine', 'ejs');
@@ -12,6 +15,9 @@ app.use(expressLayout);
 // extract style and script from sub pages into the layout
 app.set('layout extractStyles', true);
 app.set('layout extractScripts', true);
+
+// set static files
+app.use(express.static('./assets'));
 
 app.use('/', require('./routes'));
 

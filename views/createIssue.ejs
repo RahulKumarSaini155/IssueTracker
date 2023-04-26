@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="/css/createIssue.css">
+
+<section id="project">
+    <div id="pro_1">
+        <h1>Add New Issue</h1>
+    </div>
+
+    <form id="projectForm" action="/issue/create" method="POST">
+        <label for="name">Issue Name</label>
+        <input type="text" id="name" name="name" placeholder="Title" required>
+        <label for="author">Author</label>
+        <input type="text" id="author" name="author" placeholder="Author" required>
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="30" rows="7" placeholder="Description"></textarea>
+        
+        <input type="hidden" name="project_id" value="<%= project_id %>">
+
+        <label for="labels">Labels: approved, bug, documentation, duplicate, enhancement, help wanted, invalid</label>
+        <input type="text" name="labels" id="labels" list="labels" placeholder="Add Labels more than one with commas">
+
+        <!-- <label for="select">Labels</label>
+        <select name="label" id="select">
+            <option disabled selected>Choose a labels</option>
+            <option value="approved">approved</option>
+            <option value="bug">bug</option>
+            <option value="documentation">documentation</option>
+            <option value="duplicate">duplicate</option>
+            <option value="enhancement">enhancement</option>
+            <option value="help wanted">help wanted</option>
+            <option value="invalid">invalid</option>
+            <option value="Level0">Level0</option>
+            <option value="Level1">Level1</option>
+            <option value="Level2">Level2</option>
+            <option value="Level3">Level3</option>
+            <option value="Level4">Level4</option>
+        </select> -->
+
+        <!-- <ul>
+            <li>
+                <label for="a1">
+                    <input id="a1" type="checkbox" value="approved"> approved
+                </label>
+            </li>
+            <li>
+                <input id="a2" type="checkbox" value="bug">
+                <label for="a2">bug</label>
+            </li>
+            <li>
+                <input id="a3" type="checkbox" value="documentation">
+                <label for="a3">documentation</label>
+            </li>
+            <li>
+                <input id="a4" type="checkbox" value="duplicate">
+                <label for="a4">duplicate</label>
+            </li>
+            <li>
+                <input id="a5" type="checkbox" value="enhancement">
+                <label for="a5">enhancement</label>
+            </li>
+            <li>
+                <input id="a6" type="checkbox" value="help wanted">
+                <label for="a6">help wanted</label>
+            </li>
+            <li>
+                <input id="a7" type="checkbox" value="invalid">
+                <label for="a7">invalid</label>
+            </li>
+            <li>
+                <input id="a8" type="checkbox" value="Level0">
+                <label for="a8">Level0</label>
+            </li>
+
+            <li>
+                <input id="a9" type="checkbox" value="Level1">
+                <label for="a9">Level1</label>
+            </li>
+            <li>
+                <input id="a10" type="checkbox" value="Level2">
+                <label for="a10">Level2</label>
+            </li>
+            <li>
+                <input id="a11" type="checkbox" value="Level3">
+                <label for="a11">Level3</label>
+            </li>
+            <li>
+                <input id="a12" type="checkbox" value="Level4">
+                <label for="a12">Level4</label>
+            </li>
+        </ul> -->
+
+        <button>Create Project</button>
+
+    </form>
+</section>

@@ -1,0 +1,100 @@
+/* project section */
+#project{
+    width: 100%;
+    height: 92vh;
+    height: auto;
+    /* background-color: beige; */
+    background-color: #f6efe5;
+    padding: 20px 200px;
+    /* margin-bottom: 40px; */
+}
+
+#pro_1{
+    width: 100%;
+    height: 10vh;
+    /* border: 2px solid black; */
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#pro_1 a button{
+    background-color: green;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+#pro_2{
+    width: 100%;
+    height: 6vh;
+    /* border: 2px solid black; */
+    margin-bottom: 10px;
+}
+
+#pro_2 span{
+    position: relative;
+}
+
+#pro_2 span h4{
+    position: absolute;
+    left: 45px;
+    font-size: 1.2rem;
+}
+/* project list */
+#pro_plate{
+    width: 100%;
+    min-height: 70vh;
+    height: auto;
+    /* border: 2px solid black; */
+    padding: 10px;
+    /* overflow-y: auto; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plate{
+    width: 45%;
+    width: 100%;
+    height: 25vh;
+    /* border: 2px solid black; */
+    box-shadow: 2px 8px 10px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    /* padding: 15px 32px 10px 15px; */
+    padding: 15px;
+    background-color: white;
+    /* margin-left: 30px; */
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.plate h2{
+    width: 92%;
+    margin-bottom: 5px;
+    background-color: rgb(184, 177, 51);
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.plate i{
+    cursor: pointer;
+    color: red;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    font-size: 1.8rem;
+}
+
+.plate h2 a{
+    text-decoration: none;
+    /* color: white; */
+}
+
+.plate h4{
+    margin-bottom: 10px;
+}

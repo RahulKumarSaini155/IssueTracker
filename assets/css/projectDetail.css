@@ -1,0 +1,156 @@
+#issue-container{
+    width: 100%;
+    height: auto;
+    min-height: 92vh;
+    /* border: 2px solid red; */
+    padding: 20px;
+}
+
+#btn-div{
+    margin-bottom: 10px;
+    display: flex;
+}
+
+#btn{
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: green;
+    color: white;
+    font-size: 1rem;
+    margin-right: 20px;
+}
+
+#issue-count{
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
+
+#main-div{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    /* border: 2px solid red; */
+    display: flex;
+}
+
+/* search and filter */
+#filter-container{
+    width: 25%;
+    height: 80vh;
+    border: 1px solid black;
+    /* display: inline-block; */
+    margin-right: 20px;
+    padding: 5px;
+}
+
+#filter-container h1{
+    text-align: center;
+}
+
+#filter-labels{
+    /* border: 1px solid black; */
+    padding: 5px 10px;
+}
+
+#filter-labels li{
+    list-style: none;
+}
+
+#filter-author{
+    padding: 3px 5px;
+    margin: 5px 0 5px 10px;
+}
+
+#search-title{
+    padding: 3px 5px;
+    margin: 5px 0 5px 10px;
+    display: block;
+}
+
+#search-description{
+    padding: 3px 5px;
+    margin: 5px 0 5px 10px;
+    display: block;
+}
+
+/* issue lists */
+#issue-list{
+    width: 70%;
+    /* height: 80vh; */
+    height: auto;
+    margin-top: 10px;
+    padding: 10px;
+    /* border: 2px solid black; */
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#issue-list li{
+   list-style: none;
+    padding: 10px;
+    /* border: 2px solid black; */
+    width: 30%;
+    height: 20vh;
+    background-color: rgba(0,0,0, 0.8);
+    color: white;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 1px 4px 5px rgba(0,0,0, 0.4);
+    margin: 0 20px 20px 0;
+}
+
+.issue-tem h2{
+    margin-bottom: 2px;
+}
+
+.issue-tem h4{
+    margin-bottom: 3px;
+}
+
+.issue-tem p{
+    margin-bottom: 2px;
+}
+
+#labels{
+    position: absolute;
+    bottom: 7px;
+}
+
+#labels button{
+    background-color: blueviolet;
+    color: white;
+    padding: 3px 7px;
+}
+
+/* filter */
+#search_title{
+    padding: 4px 5px;
+}
+
+#btn2{
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: green;
+    color: white;
+    font-size: 1rem;
+    margin-right: 20px;
+}
+
+#btn3{
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: green;
+    color: white;
+    font-size: 1rem;
+    margin-right: 20px;
+}
+
+#clear_filter_btn{
+    padding: 7px 30px;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 20px;
+}

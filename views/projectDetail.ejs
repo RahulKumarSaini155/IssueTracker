@@ -1,0 +1,117 @@
+<link rel="stylesheet" href="/css/projectDetail.css">
+
+<section id="issue-container">
+    <div id="btn-div">
+        <a href="/issue/add/<%=  project_id %>">
+            <button id="btn">Create Issue</button>
+        </a>
+        <h4 id="issue-count">Total Issues: <%= issues.length %>
+        </h4>
+    </div>
+    <hr>
+    <div id="main-div">
+        <div id="filter-container">
+            <h1>Filter</h1>
+            <hr>
+
+            <!-- filter issues and search -->
+            <form action="/content/filter" method="POST">
+                <h3>Search By Title and Description</h3>
+                <input type="text" id="search_title" name="search" placeholder="Search by Title or Description">
+                <input type="hidden" name="project" value="<%=project_id%>">
+                <br>
+                <input type="submit" id="btn2" value="Search">
+            </form>
+            <br>
+
+            <form action="/content/filter" method="POST">
+                <h3>Filter By Author</h3>
+                <select name="author" id="filter-author">
+                    <option disabled selected>Choose a Author</option>
+                    <% for(let s of issues) { %>
+                        <option value="<%=s.author%>">
+                            <%= s.author %>
+                        </option>
+                        <% } %>
+                            <input type="hidden" name="project" value="<%=project_id%>">
+                            <br>
+                            <input type="submit" id="btn3" value="Filter By Author">
+                </select>
+            </form>
+            <br>
+
+            <form method="POST" action="/content/filter">
+                <h3>Filter By Labels</h3>
+                <input type="hidden" name="label">
+                <div id="filter-labels">
+                    <li>
+                        <label for="approved"> <input type="checkbox" name="label" class="checkbox" id="approved"
+                                value="approved"> approved</label>
+                    </li>
+                    <li>
+                        <label for="bug"> <input type="checkbox" name="label" class="checkbox" id="bug" value="bug">
+                            bug</label>
+                    </li>
+                    <li>
+                        <label for="documentation"> <input type="checkbox" name="label" class="checkbox"
+                                id="documentation" value="documentation"> documentation</label>
+                    </li>
+                    <li>
+                        <label for="duplicate"> <input type="checkbox" name="label" class="checkbox" id="duplicate"
+                                value="duplicate"> duplicate</label>
+                    </li>
+                    <li>
+                        <label for="enhancement"> <input type="checkbox" name="label" class="checkbox"
+                                id="enhancement" value="enhancement"> enhancement</label>
+                    </li>
+                    <li>
+                        <label for="help wanted"> <input type="checkbox" name="label" class="checkbox"
+                                id="help wanted" value="help wanted"> help wanted</label>
+                    </li>
+                    <li>
+                        <label for="invalid"> <input type="checkbox" name="label" class="checkbox" id="invalid"
+                                value="invalid"> invalid</label>
+                    </li>
+                </div>
+                <input type="hidden" name="project" value="<%=project_id%>">
+                <button id="btn">Search</button>
+            </form>
+
+            <br>
+            <!-- cleat filter -->
+            <form action="/content/filter" method="POST">
+                <input type="hidden" name="project" value="<%=project_id%>">
+                <button id="clear_filter_btn">Clear Filter</button>
+            </form>
+
+        </div>
+
+
+
+        <!-- issue templates create -->
+        <div id="issue-list">
+            <% for(s of issues) { %>
+                <li class="issue-tem">
+                    <h2>
+                        <%= s.name %>
+                    </h2>
+                    <hr>
+                    <h4>
+                        <%= s.author %>
+                    </h4>
+                    <p>
+                        <%= s.description %>
+                    </p>
+                    <div id="labels">
+                        <% for(lab of s.label) { %>
+                            <button>
+                                <%= lab %>
+                            </button>
+                            <% } %>
+                    </div>
+                </li>
+                <% } %>
+
+        </div>
+    </div>
+</section>

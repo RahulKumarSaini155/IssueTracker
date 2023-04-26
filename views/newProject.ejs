@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/css/newProject.css">
+
+<section id="project">
+    <div id="pro_1">
+        <h1>Add New Project</h1>
+    </div>
+
+    <form id="projectForm" action="/create/project" method="post">
+        <label for="name">Project Name</label>
+        <input type="text" id="name" name="name" placeholder="Porject Name" required>
+        <label for="author">Project Author</label>
+        <input type="text" id="author" name="author" placeholder="Porject Author" required>
+        <label for="description">Project Description</label>
+        <textarea name="description" id="description" cols="30" rows="7" placeholder="Description"></textarea>
+        
+        <button>Create Project</button>
+
+    </form>
+</section>
